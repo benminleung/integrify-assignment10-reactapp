@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700');
+:root {
+  --shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-active: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-hover: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);   
+  --item-shadow: 15px 0px 15px -15px rgba(0,0,0,0.25);
+  
+  /* --ctaColor: dodgerblue; */
+  --ctaColor: #4485c5;
+  --primaryColor: #404040;
+  --secondaryColor: #eee;
+  --textBackgroundColor: #fff;
+}
+
+p, h1, h2, h5{
+  margin: 0;
+}
+
+p {
+  line-height: 150%;
+}
+
+h1 {
+  font-weight: 100;
+  text-shadow: 2px 1px 1px black;
+  font-size: 2.5em;
+}
+  h1 i {
+    font-weight: 400;
+  }
+
+h2 {
+  font-weight: 100;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+body {
+  background: var(--secondaryColor);
+}
+
+.App {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80%;
+  width:100%;
+} 
+  .App > * {
+    padding-top: 5em;
+  }
+
+.ButtonCta {
+  border-radius: 3px;
+  /* background: var(--ctaColor); */
+  text-transform: uppercase;
+  /* box-shadow: var(--shadow); */
+  height: fit-content;
+  display: block;
+  text-align: center;
+}
+
+.CallToAction {
+  color: white;
+  position: relative;
+  background: var(--ctaColor);
+  padding: 1em 5em;
+  display: grid;
+  grid-template: auto / max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -12px 20px 0px rgba(0, 0, 0, 0.32);
+}
+
+  .CallToAction::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 5em solid transparent;
+    border-top-color: var(--ctaColor);
+    border-bottom: 0;
+    border-left: 0;
+    margin-bottom: -5em;
+  }
+
+.SpeechBox {
+  position: relative;
+  background: var(--textBackgroundColor);
+  display: grid;
+  justify-items: center;
+}
+  .SpeechBoxAfter {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 2em solid transparent;
+    border-top-color: var(--textBackgroundColor);
+    border-bottom: 0;
+    border-left: 0;
+    margin-bottom: -2em;
+  }
+
+  .IconCircle {
+    background: var(--primaryColor);
+    box-shadow: inset 0px 0px 13px 3px rgba(0, 0, 0, 0.66), inset 0px 0px 36px 31px rgba(0, 0, 0, 0.245);
+    border-radius: 50%;
+    height: 9em;
+    width: 9em;
+    display: grid;
+    align-items: center;
+    margin-top: 2em;
+  }
+  .SpeechBox i {
+    font-size: 4em;
+    color: var(--textBackgroundColor);
+  }
+
+
+  /* .SpeechBox h1 {
+    font-size: 4em;
+    color: var(--textBackgroundColor);
+    background: gray;
+    width: 3em;
+    height: 3em;
+    position: relative;
+  }
+  .SpeechBox h1::before{
+
+  } */
+  
+.Title {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  grid-gap: 2em;
+  margin-bottom: 2em;
+}
+
+.box {
+  padding: 0 2em;
+  /* background: var(--textBackgroundColor); */
+}
+  .BlogBox {
+    text-align: justify;
+    text-justify: inter-word;
+    padding-bottom: 2em;
+  }
+  .TextBox {
+
+  }
+    .TextBox h3 {
+      text-transform: uppercase;
+    }
+
+.borderBottomDashed {
+  border-image: url(./images/Border-BG.jpg) 27 round;
+  border-top: 8px solid transparent;
+}
+
+.container {
+  height: 100%;
+  max-width: 100em;
+  width: 95vw;
+  margin: 0 auto;
+}
+
+.itemContainer {
+}
+
+.itemShadow {
+  box-shadow: var(--item-shadow);
+}
+
+.itemContainerHover .SpeechBox{background: transparent;}
+.itemContainerHover .SpeechBoxAfter{border-top-color: transparent;}
+.itemContainerHover:hover .SpeechBox {background: white; box-shadow: var(--item-shadow);}
+.itemContainerHover:hover .SpeechBoxAfter {border-top-color: white;}
+
+.sec-header {
+  background-color: var(--primaryColor);
+  /* height: 150px; */
+  color: white;
+
+}
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  .headerText {
+    text-align: left;
+  }
+
+.sec-header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.sec-readMore {
+  background: var(--secondaryColor);
+  box-shadow: 0px -30px 35px 0px #00000078;
+}
+  .sec-readMore-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1em;
+  }
+
+.sec-recentWork-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3em 2vw;
+}
+  .sec-recentWork-container .displayImage {
+    width: 100%;
+  }
+
+.sec-tesDev-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2em;
+  margin-bottom: 4em;
+}
+  .testimonial{
+  }
+    .testimonial-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3em 2vw;
+    }
+  .development{
+    display: grid;
+    grid-template-rows: 0fr 1fr;
+  }
+    .development-container{
+      display: grid;
+      grid-template-rows: 0fr 1fr 0fr;
+      
+      /* grid-template-rows: max-content; */
+      /* background: var(--textBackgroundColor); */
+      /* align-content: space-between; */
+    }
+      .designProductionHead{
+        display:grid;
+        grid-template-columns: 0fr 0fr 1fr;
+      }
+        .selected {
+          z-index: 2;
+        }
+        .notSelected {
+          background: #f4f4f4;
+        }
+    .developmentButton{
+      justify-self: end;
+      align-self: end;
+      /* background: var(--textBackgroundColor); */
+    }
+
+.sec-footer{
+  background: var(--primaryColor);
+  padding-bottom: 3em;
+}
+  .sec-footerContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2em;
+  }
+    .sec-footerContainer > div {
+      display: grid;
+      grid-row-gap: 1em;
+      grid-auto-rows: min-content;
+    }
+      .flickrContainer {
+        display: grid;
+        grid-template: repeat(2,minmax(2em,6em))/repeat(3,minmax(2em,6em));
+        grid-gap: .5em;
+        justify-content: stretch;
+        align-items: stretch;
+      }
+        .flickrContainer label {
+          background: rgb(49, 49, 49);
+          justify-self: stretch;
+        }
+  .FooterBox{
+    color: white;
+    text-align: left;
+  }
+
+.sec-copyrightBar{
+  background: rgb(49, 49, 49);
+}
+
+.secondComponent {
+  border: thin solid lightsteelblue;
+  margin: 1em;
+}
+
+.shadow, .shadowHov, .shadowBtn {box-shadow: var(--shadow);}
+.shadowHov:hover, .shadowBtn:hover {box-shadow: var(--shadow-hover);}
+.shadowBtn:active {box-shadow: var(--shadow-active);}
